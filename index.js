@@ -9,8 +9,6 @@ const educationcontentvisibility = document.getElementById("educationcontent").s
 
 const tabcontents = document.getElementsByClassName("tabcontents");
 
-
-
 function skillsTabFunction(){
     if(skillscontent.style.display == "flex"){
     }
@@ -34,3 +32,24 @@ function educationTabFunction(){
     }
 }
 
+const frontimg = document.getElementById("frontimg");
+
+document.addEventListener('scroll', function() {
+    let value = window.scrollY;
+    if(value > 2000){
+
+    }
+    else{
+        frontimg.style.top = value * 1.1 + "px"
+    }
+})
+
+const sidemenu = document.getElementById("sidemenu");
+
+function openmenu(){
+    sidemenu.style.right = "0px"
+}
+function exitmenu(){
+    sidemenu.style.right = "-200px"
+
+}
